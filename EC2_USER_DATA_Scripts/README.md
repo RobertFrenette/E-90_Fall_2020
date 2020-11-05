@@ -1,4 +1,4 @@
-# EC2 HTTP Server User Data Script
+# EC2 Apache Server User Data Script
 
 ```
 #!/bin/bash
@@ -8,6 +8,17 @@ echo "Hello, World!" > /var/www/html/index.html
 echo "I am Healthy!" > /var/www/html/healthcheck.html
 service httpd start
 chkconfig httpd start
+```
+
+# EC2 LAMP Server User Data Script
+
+```
+#!/bin/bash
+yum install httpd php php-mysql mysql -y
+yum update -y
+chkconfig httpd on
+service httpd start
+echo "<?php phpinfo();?>" > /var/www/html/index.php
 ```
 
 # EC2 Node Server User Data Script
