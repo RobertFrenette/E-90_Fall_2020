@@ -8,6 +8,8 @@ Download the ```100-0.txt.zip``` file and extract the ```100-0.txt``` data file 
 ## Step 2
 Generate an EMR cluster with a Core Hadoop installation that you can SSH into directly.
 
+![Screenshot](img/img_2.png?raw=true "Screenshot")
+
 ## Step 3
 SSH into your master, using ```hadoop``` as the user, to upload (scp) and execute the ```WordCount.java``` program.
 
